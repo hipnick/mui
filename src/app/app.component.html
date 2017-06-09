@@ -1,3 +1,28 @@
-<h1>
-  {{title}}
-</h1>
+﻿<m fw h="1" nav style="background-color:red">
+  <m logo fh pad="8" w="3">
+    Logo
+  </m>
+  <m menu fh w="7" pad="8">
+    <m w="1" menu-item pad="4" repeat-menu *ngFor="let menu of ['Menu1', 'Menu2', 'Menu3', 'Menu4']">{{menu}}</m>
+  </m>
+</m>
+<m fw h="10" content style="transition:all 1ms; transform:translateY(0px)">
+  <m start style="min-height:100%">
+    <m fw h="1" name>Name</m>
+    <m fw h="1" greeting>Greeting</m>
+    <m fw h="1" next>Next Button</m>
+    <m fw h="1" login>Login link</m>
+  </m>
+  <m categories style="min-height:100%">
+    <m fw h="1" name>Categories</m>
+    <m fw h="1" greeting>Categories Description</m>
+    <m fw h="10" selectables categories-selectables>
+      <m w="1 40%" h="1" *ngFor="let category of ['Category1', 'C2', 'C3']">
+        {{category}}
+      </m>
+    </m>
+  </m>
+</m>
+<m fw h="1" footer style="background-color:red">
+  Footer
+</m>
